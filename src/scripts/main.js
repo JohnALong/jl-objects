@@ -58,37 +58,70 @@
 
 // Lightning exercise 3
 
-const empireStateBuilding = {
-    stories: 103,
-    height: 1453,
-    address: "350 Fifth Avenue, Manhattan, New York 10118",
-    squareFeet: 2768591,
-    constructionDate: 1931,
-    cost: 40948900,
-    owner: "Empire State Realty Trust",
-    eastWestLength: 424,
-    northSouthLength: 187,
-    architect: "Shreve, Lamb & Harmon"
+// const empireStateBuilding = {
+//     stories: 103,
+//     height: 1453,
+//     address: "350 Fifth Avenue, Manhattan, New York 10118",
+//     squareFeet: 2768591,
+//     constructionDate: 1931,
+//     cost: 40948900,
+//     owner: "Empire State Realty Trust",
+//     eastWestLength: 424,
+//     northSouthLength: 187,
+//     architect: "Shreve, Lamb & Harmon"
+// }
+// // dimensions to console
+// console.log("stories of building", empireStateBuilding.stories);
+// console.log("height of building", empireStateBuilding.height);
+// console.log("square feet of building", empireStateBuilding.squareFeet);
+// console.log("Length east and west", empireStateBuilding.eastWestLength);
+// console.log("length north & south", empireStateBuilding.northSouthLength);
+// console.log(`The empire state building is ${empireStateBuilding.height} feet high with ${empireStateBuilding.stories}. The east west length is ${empireStateBuilding.northSouthLength}.  It is ${empireStateBuilding.squareFeet}`);
+// // creating variables to search with bracket notation
+// const buildingAddress = "address";
+// const dateBuilt = "constructionDate";
+// const buildingCost = "cost";
+// const buildingOwner = "owner";
+// const buildingArchitect = "architect";
+
+// // misc info to console log with bracket notation
+// console.log("address of building", empireStateBuilding[buildingAddress]);
+// console.log("it was built in", empireStateBuilding[dateBuilt]);
+// console.log("the cost to build was", empireStateBuilding[buildingCost]);
+// console.log("the owner is", empireStateBuilding[buildingOwner]);
+// console.log("the architect was", empireStateBuilding[buildingArchitect]);
+
+// console.log(`The address is ${empireStateBuilding[buildingArchitect]}.  It was built in ${empireStateBuilding[dateBuilt]}, at a cost of ${empireStateBuilding[buildingCost]}.  It was built by ${empireStateBuilding[buildingArchitect]}, and is owned by ${empireStateBuilding[buildingOwner]}.`);
+
+// Lightning exercise 4
+
+const nashvilleSoftwareSchool = {
+    founded: 2012,
+    director: "John Wark",
+    instructors: {
+        fullTime: ["Jisie", "Brenda", "Steve", "Joe", "Andy"],
+        partTime: ["Zoe", "Nathan"]
+    },
+    address: "500 Interstate Blvd. S"
 }
-// dimensions to console
-console.log("stories of building", empireStateBuilding.stories);
-console.log("height of building", empireStateBuilding.height);
-console.log("square feet of building", empireStateBuilding.squareFeet);
-console.log("Length east and west", empireStateBuilding.eastWestLength);
-console.log("length north & south", empireStateBuilding.northSouthLength);
-console.log(`The empire state building is ${empireStateBuilding.height} feet high with ${empireStateBuilding.stories}. The east west length is ${empireStateBuilding.northSouthLength}.  It is ${empireStateBuilding.squareFeet}`);
-// creating variables to search with bracket notation
-const buildingAddress = "address";
-const dateBuilt = "constructionDate";
-const buildingCost = "cost";
-const buildingOwner = "owner";
-const buildingArchitect = "architect";
+const partTimeInstructors = nashvilleSoftwareSchool.instructors.partTime;
+console.log(partTimeInstructors);
+for (let i = 0; i < partTimeInstructors.length; i++) {
+    console.log(`The part time instructors are ${partTimeInstructors[i]}`);
+}
+const fullTimeInstructors = nashvilleSoftwareSchool.instructors.fullTime;
+console.log(fullTimeInstructors);
+for (let i = 0; i < fullTimeInstructors.length; i++) {
+    console.log(`The full time instructors are ${fullTimeInstructors[i]}`);
+}
 
-// misc info to console log with bracket notation
-console.log("address of building", empireStateBuilding[buildingAddress]);
-console.log("it was built in", empireStateBuilding[dateBuilt]);
-console.log("the cost to build was", empireStateBuilding[buildingCost]);
-console.log("the owner is", empireStateBuilding[buildingOwner]);
-console.log("the architect was", empireStateBuilding[buildingArchitect]);
+// jisie code
 
-console.log(`The address is ${empireStateBuilding[buildingArchitect]}.  It was built in ${empireStateBuilding[dateBuilt]}, at a cost of ${empireStateBuilding[buildingCost]}.  It was built by ${empireStateBuilding[buildingArchitect]}, and is owned by ${empireStateBuilding[buildingOwner]}.`);
+// for in loop to iterate instructors object
+
+const instructorsObj = nashvilleSoftwareSchool.instructors;
+for (let key in instructorsObj) {
+    console.log(instructorsObj[key]);
+}
+// exercise 2
+console.log(`The two instructors asked for are ${fullTimeInstructors[fullTimeInstructors.length -1]} and ${nashvilleSoftwareSchool.instructors.partTime[0]}`);
