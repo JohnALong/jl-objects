@@ -70,21 +70,25 @@ const empireStateBuilding = {
     northSouthLength: 187,
     architect: "Shreve, Lamb & Harmon"
 }
-
+// dimensions to console
 console.log("stories of building", empireStateBuilding.stories);
 console.log("height of building", empireStateBuilding.height);
 console.log("square feet of building", empireStateBuilding.squareFeet);
 console.log("Length east and west", empireStateBuilding.eastWestLength);
 console.log("length north & south", empireStateBuilding.northSouthLength);
-
+console.log(`The empire state building is ${empireStateBuilding.height} feet high with ${empireStateBuilding.stories}. The east west length is ${empireStateBuilding.northSouthLength}.  It is ${empireStateBuilding.squareFeet}`);
+// creating variables to search with bracket notation
 const buildingAddress = "address";
 const dateBuilt = "constructionDate";
 const buildingCost = "cost";
 const buildingOwner = "owner";
 const buildingArchitect = "architect";
 
+// misc info to console log with bracket notation
 console.log("address of building", empireStateBuilding[buildingAddress]);
 console.log("it was built in", empireStateBuilding[dateBuilt]);
 console.log("the cost to build was", empireStateBuilding[buildingCost]);
 console.log("the owner is", empireStateBuilding[buildingOwner]);
 console.log("the architect was", empireStateBuilding[buildingArchitect]);
+
+console.log(`The address is ${empireStateBuilding[buildingArchitect]}.  It was built in ${empireStateBuilding[dateBuilt]}, at a cost of ${empireStateBuilding[buildingCost]}.  It was built by ${empireStateBuilding[buildingArchitect]}, and is owned by ${empireStateBuilding[buildingOwner]}.`);
