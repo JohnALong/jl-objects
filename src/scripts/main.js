@@ -115,9 +115,9 @@ for (let i = 0; i < fullTimeInstructors.length; i++) {
     console.log(`The full time instructors are ${fullTimeInstructors[i]}`);
 }
 
-// jisie code
+// // jisie code
 
-// for in loop to iterate instructors object
+// // for in loop to iterate instructors object
 
 const instructorsObj = nashvilleSoftwareSchool.instructors;
 for (let key in instructorsObj) {
@@ -125,3 +125,41 @@ for (let key in instructorsObj) {
 }
 // exercise 2
 console.log(`The two instructors asked for are ${fullTimeInstructors[fullTimeInstructors.length -1]} and ${nashvilleSoftwareSchool.instructors.partTime[0]}`);
+
+const beatles = {
+    albums: ["Abbey Road", "Sgt Peppers Lonely Heart's Club Band", "Revolver", "Magical Mystery Tour", "Something New"],
+    history: {
+        formed: 1960,
+        disbanded: 1970
+    },
+    members: [
+        {
+            name: "George Harrison",
+            birth: 1943,
+            death: 2001
+        },
+        {
+            name: "Paul McCartney",
+            birth: 1942,
+            death: null
+        },
+        {
+            name: "John Lennon",
+            birth: 1940,
+            death: 1980
+        },
+        {
+            name: "Ringo Starr",
+            birth: 1940,
+            death: null
+        }
+    ]
+}
+// Paul McCartney was in the Beatles from 1960 to 1970. He was born in 1942. He contributed heavily to the Magical Myster Tour Album.
+const paul = beatles.members[1].name;
+const yearStarted = beatles.history.formed;
+const yearEnded = beatles.history.disbanded;
+const born = beatles.members[1].birth;
+const magMystTour = beatles.albums[3];
+console.log("variables needed", paul, yearStarted, yearEnded, born, magMystTour);
+console.log(`${paul} was in the Beatles from ${yearStarted} to ${yearEnded}.  He was born in ${born}.  He contributed heavily to the ${magMystTour} album.`);
